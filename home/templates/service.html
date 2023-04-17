@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+  <div class="kryesore">
+    <img src="{% static 'images/bg2.jpg' %}" alt="">
+</div>
+{% for sherbim in sherbimet %}
+<div class="Sherbime my-5"> 
+  <div class="row">
+    <div class="col-12 col-md-5">
+        <img src="{{sherbim.sherbimet_image.url}}" >
+    </div>
+    <div class="col-12 col-md-7"> 
+      <div class="row">
+        <h4>{{sherbim.sherbimet_title}}</h4>
+      </div>
+      <div class="row">
+        <p>{{sherbim.sherbimet_description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+<!-- <div class="Sherbime my-5"> 
+  <div class="row">
+    <div class="col-12 col-md-5">
+        <img src="images/implante.jpg">
+    </div>
+    <div class="col-12 col-md-7"> 
+      <div class="row">
+        <h4>Implante Dentare</h4>
+      </div>
+      <div class="row">
+        <p>Implantet dentare janë rrënjë zëvendësuese të dhëmbëve. Implantet dentare konsiderohen si mënyra më e mirë për zëvendësimin e dhëmbëve, që mungojnë në gojë. Jane te kundraindikuara ne ulje te aftesive immune,mjekimet me kortizonike,probleme te koagulimit te gjakut,semundje endokrine te renda,crregullimet rheumatoide,semundje te kockave,cirrozat hepatike,etj.
+          Lokalisht kundraindikohen ne osteomielite,radioterapi,semundje rrekurrente te mukozes,higjene e keqe,etj
+          Pregatiten prej nje lloj metali qe ka biokompatibilitet me kocken (titanium).
+          Jane gjatesi dhe diameter te ndryshem ne vartesi te kushteve anatomike ku do te vendosen.
+          Siperfaqja eshte e filetuar dhe e veshur ose jo me hidroksiapatit (HA).
+          Ne perputhje me direktivat e EC per produktet mjeksore implantet jane te sterilizuara ne rreze gama ndersa konfeksioni eshte ne dopjo shishe qelqi.
+          Pas vendosjes se implanteve eshte e domosdoshme qe pacienti te mbaje nje higjene shume te mire te gojes.
+          Procedura kirurgjikale kryhet ne nje seance ndersa ajo protetike (vendosja e dhembeve) mbas te pakten tre muajsh.</p>
+      </div>  
+    </div>
+  </div>
+</div>
+<div class="Sherbime my-5"> 
+  <div class="row">
+    <div class="col-12 col-md-5">
+        <img src="images/kirurgji.jpg" >
+    </div>
+    <div class="col-12 col-md-7"> 
+      <div class="row">
+        <h4>Kirurgji Orale</h4>
+      </div>
+      <div class="row">
+        <p>Në rastet kur pacienti nuk mund të mbajë proteza fikse në gojë dhe kërkon të bëjë protezë të lëvizshme, kirurgu duhet të vlerësojë nevojën e pacientit për të kryer kirurgjinë parapërgatitëse në mënyrë që proteza e lëvizshme të ketë stabilitetin maksimal në gojë.
+
+          Ndërhyrjet kryesore preprotezike janë heqja e indeve të buta të tepërta, që kanë mbetur nga tërheqja e kockës, si pasojë e mungesës prej shumë kohësh të dhëmbëve dhe e toreve, që janë neoformacione të kockës në qiellzë ose në brendësi të nofullës së poshtme, që mund të pengojnë zbritjen e protezës.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="Sherbime my-5"> 
+  <div class="row">
+    <div class="col-12 col-md-5">
+        <img src="images/ortodonci.jpg" >
+    </div>
+    <div class="col-12 col-md-7"> 
+      <div class="row">
+        <h4>Ortodonci</h4>
+      </div>
+      <div class="row">
+        <p>Në rastet kur pacienti nuk mund të mbajë proteza fikse në gojë dhe kërkon të bëjë protezë të lëvizshme, kirurgu duhet të vlerësojë nevojën e pacientit për të kryer kirurgjinë parapërgatitëse në mënyrë që proteza e lëvizshme të ketë stabilitetin maksimal në gojë.
+
+          Ndërhyrjet kryesore preprotezike janë heqja e indeve të buta të tepërta, që kanë mbetur nga tërheqja e kockës, si pasojë e mungesës prej shumë kohësh të dhëmbëve dhe e toreve, që janë neoformacione të kockës në qiellzë ose në brendësi të nofullës së poshtme, që mund të pengojnë zbritjen e protezës.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="Sherbime my-5"> 
+  <div class="row">
+    <div class="col-12 col-md-5">
+        <img src="images/protetike.png" >
+    </div>
+    <div class="col-12 col-md-7"> 
+      <div class="row">
+        <h4>Terapi/Protetike</h4>
+      </div>
+      <div class="row">
+        <p>Proteza fikse zëvendëson elementët dentar natyral me punime definitive dhe të qendrueshme (fikse). Këtu përfshihen fasetat, këllefet (zëvendësues artificial të vetëm një dhëmbi) dhe urat (zëvendësues të më shumë elementëve dentar) të çementuara në shtylla mbështetëse (dhëmbë ose rrënjë), dhe si rrjedhim janë fikse dhe nuk mund të levizen nga pacienti.
+
+          Proteza të lëvizshme ose klasike
+          
+          Protezat e lëvizshme zëvendësojnë një pjesë ose të gjithë harkun dentar dhe mund të hiqen dhe vihen nga pacienti me qëllim kryerjen e higjenës së përditshme.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="Sherbime my-5"> 
+  <div class="row">
+    <div class="col-12 col-md-5">
+        <img src="images/trajtimi i femijeve.jpg" >
+    </div>
+    <div class="col-12 col-md-7"> 
+      <div class="row">
+        <h4>Trajtimi i femijeve</h4>
+      </div>
+      <div class="row">
+        <p>Vëmëndja i kushtohet parandalimit të dëmtimit të dhëmbëve që shkaktohet nga kariesi, nëpërmjet edukimit për higjenën e kavitetit oral, këshillave për dietën e duhur, aplikimit të fluorit dhe të silanizimit të dhëmballëve.
+
+          Dhëmbët, kockat dhe indet gingivale kërkojnë një dietë të shëndetshme dhe të mirëekuilibruar. Në përgjithësi, ushqimet me përmbajtje të shumtë sheqeri dhe lëngjet me gaz mund të shkaktojnë kavitete karioze, prandaj fëmijët duhet të konsumojnë ushqime të shëndetshme si perimet, frutat, kosin dhe djathin, me përmbajtje të ulët yndyre.</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+{% endblock %}

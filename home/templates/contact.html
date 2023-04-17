@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+      <div class="kryesore">
+        <img src="{% static 'images/kontakto.jpg' %}" alt="">
+    </div>
+    <div class="container text-center my-5">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="card card-body-icon">
+            <i class="fa-solid fa-location-dot">
+            </i>
+            <h4>Adresa:</h4>
+            <h6>Sheshi Musa Fratari, Kelcyre, Shqiperi</h6>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card card-body-icon" >
+            <i class="fa-solid fa-envelope"></i>
+            <h4>Informacione kontakti</h4>
+            <h6>+355 69 918 94 49</h6>
+            <h6>gramosshehu2@gmail.com</h6>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card card-body-icon" >
+            <i class="fa-solid fa-clock" ></i>
+            <h4>Orari:</h4>
+            <h6>e Hene - e Shtune: 09:00 - 20:00</h6>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="rezervimi"  >
+        <div class="container text-center my-5" >
+          <div id="rezervimi" class="row">
+            <div  class="col-12 col-md-5 pjesa1">
+              <h4> <span>Mireseerdhe tek ne!</span></h4>
+              <p>Për t'ju ndihmuar dhe për të rezervuar një takim, na duhen më shumë informacione, në mënyrë që të mund t'ju ndihmojmë më së miri me çmimet, shërbimet dhe t'ju kontaktojë një specialist personal dentar. Ju lutemi plotësoni formularin dhe do të merrni një email me më shumë informacion dhe ekipi ynë do t'ju kontaktojë!</p>
+            </div>
+      
+              <div class="col-12 col-md-7 pjesa2">
+                <h2>Cakto nje takim</h2>
+                <form method="POST" id="orderForm">
+                  {% csrf_token %}
+                <input type="text" class="form-control" id="'name" name="name" placeholder="Emri dhe Mbiemri">
+                <input type="number" class="form-control" id="age" name="mosha" placeholder="Mosha" min="5" max="80">
+                <input type="tel" class="form-control" id="phone" name="tel" placeholder="Numri i telefonit">
+                <input type="text" class="form-control" id="problem" name="problema" placeholder="Problematika juaj">
+                <!-- <input type="file" class="form-control" id="photo" name="upload" accept=".jpg, .jpeg" aria-invalid="false"> -->
+                <input type="submit" class="button" id="button" value="Dergo">
+                <!-- <div class="message">
+                  <div class="success" id="success">Takimi u rezervua me sukses!
+                  </div>
+                  <div class="danger" id="danger">Ju lutem plotesoni te gjita te dhenat!</div>
+                </div> -->
+              </form>
+              </div>
+      
+   
+          </div>
+        </div>
+      </div>
+  
+      {% endblock %}

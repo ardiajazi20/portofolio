@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+    <br>
+<div class="kryesore">
+    <img src="{% static 'images/bg1.jpg' %}" alt="">
+</div>
+<div class="tekst1">
+    <h2>Cfare do te gjeni te ne</h2>
+</div>
+<!--Fillim card-->
+<div class="row row-cols-1 row-cols-md-3  g-4">
+  {% for sherbim in sherbimet %}
+    <div class="col">
+      <div class="card h-100">
+        <img src="{{sherbim.sherbimet_image.url}}" class="card-img-top" alt="..." w="50%">
+        <div class="card-body">
+          <h5 class="card-title">{{sherbim.sherbimet_title}}</h5>
+          <p class="card-text"> {{sherbim.sherbimet_description}}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+  <!--Fund card-->
+  <br> <br>
+<div class="rezervimi" >
+  <div class="container text-center my-5" >
+    <div id="rezervimi" class="row">
+      <div  class="col-12 col-md-5 pjesa1">
+        <h4> <span>Mireseerdhe tek ne!</span></h4>
+        <p>Për t'ju ndihmuar dhe për të rezervuar një takim, na duhen më shumë informacione, në mënyrë që të mund t'ju ndihmojmë më së miri me çmimet, shërbimet dhe t'ju kontaktojë një specialist personal dentar. Ju lutemi plotësoni formularin dhe do të merrni një email me më shumë informacion dhe ekipi ynë do t'ju kontaktojë!</p>
+      </div>
+
+        <div class="col-12 col-md-7 pjesa2">
+          <h2>Cakto nje takim</h2>
+          <form action="" method="POST" id="orderForm" onsubmit="return checkform(this)">
+            {% csrf_token %}
+          <input type="text" class="form-control" name="name" placeholder="Emri dhe Mbiemri">
+          <input type="number" class="form-control" name="mosha" placeholder="Mosha" min="5" max="80">
+          <input type="tel" class="form-control" name="tel" placeholder="Numri i telefonit">
+          <input type="text" class="form-control" name="problema" placeholder="Problematika juaj">
+          <!-- <input type="file" class="form-control" name="upload" accept=".jpg, .jpeg" aria-invalid="false"> -->
+          <input type="submit" class="button" name="submit" value="Dergo">
+        </form>
+        </div>
+
+    </div>
+  </div>
+</div>
+<div class="prove">
+    <img src="{% static 'images/canva.jpg' %}" alt="" >
+</div>
+    
+{% endblock %}
